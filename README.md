@@ -36,6 +36,7 @@ To install Python with all necessary dependencies, we recommend the use of conda
 
 ```
 git clone --recursive https://github.com/danruod/BERTPhylo.git
+cd BERTPhylo/
   
 conda env create -f environment.yaml
 conda activate bertphylo
@@ -43,7 +44,8 @@ conda activate bertphylo
 
 We recommend running on a Linux system. The setup should be completed within a few minutes. 
 
-The PlantSeqs dataset needs to be [downloaded](https://drive.google.com/drive/folders/1wAQVjLYqlRA_0Xk9I3XvOsh_A-sdb9zZ?usp=sharing) manually and stored in the plantseqs folder under the BERTPhylo directory (`./plantseqs/`).
+The model parameters of BERTPhylo need to be [downloaded](https://drive.google.com/drive/folders/1ocbnwkGMXgkYwLw1KVlVLokooVLmNdNm?usp=sharing) manually and stored in the checkpoints folder under the BERTPhylo directory (`./checkpoints/`)
+The PlantSeqs dataset needs to be [downloaded](https://drive.google.com/drive/folders/1wAQVjLYqlRA_0Xk9I3XvOsh_A-sdb9zZ?usp=sharing) manually and stored in the plantseqs folder under the BERTPhylo directory (`./PlantSeqs/`).
 
 
 ## Reproduction Instructions
@@ -54,7 +56,9 @@ Run
   python eval.py  --model_name bertphylo --batch_size 64 --suffix test
   ```
 
-to reproduce results for novelty detection and taxonomic classification on the PlantSeqs dataset. After executing the above code, you can get the outputs at `/results/bertphylo`, where `test.xlsx` contains the source data of all tables in the manuscript, `confusion_matrix`, `ood_scores`, and `pr_roc` folders contain the source data required for Fig. 4b, Fig. 5, Fig. S1-S5 in the manuscript.
+to reproduce results for novelty detection and taxonomic classification on the PlantSeqs dataset. The expected runtime of this command is 1 hour using an Nvidia A40 GPU (50 GB), 10 cores of a Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, and 128 GB of RAM. 
+
+After executing the above code, you can get the outputs at `/results/bertphylo`, where `test.xlsx` contains the source data of all tables in the manuscript, `confusion_matrix`, `ood_scores`, and `pr_roc` folders contain the source data required for Fig. 4b, Fig. 5, Fig. S1-S5 in the manuscript.
 
 
 ## File Structure
