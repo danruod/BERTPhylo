@@ -37,7 +37,7 @@ To install Python with all necessary dependencies, we recommend the use of conda
 ```
 git clone --recursive https://github.com/danruod/BERTPhylo.git
   
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda activate bertphylo
 ```
 
