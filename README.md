@@ -43,7 +43,7 @@ conda activate bertphylo
 
 We recommend running on a Linux system. The setup should be completed within a few minutes. 
 
-The PlantSeqs dataset needs to be [downloaded](https://drive.google.com/drive/folders/1wAQVjLYqlRA_0Xk9I3XvOsh_A-sdb9zZ?usp=sharing) manually and stored at root directory of BERTPhylo (`./`).
+The PlantSeqs dataset needs to be [downloaded](https://drive.google.com/drive/folders/1wAQVjLYqlRA_0Xk9I3XvOsh_A-sdb9zZ?usp=sharing) manually and stored in the plantseqs folder under the BERTPhylo directory (`./plantseqs/`).
 
 
 ## Reproduction Instructions
