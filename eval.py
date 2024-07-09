@@ -29,10 +29,7 @@ def set_seed(seed):
 def main(args):
     set_seed(args.seed)
     
-    if args.model_name == 'bertax':
-        data_path = os.path.join("./plantseqs", args.model_name)
-    else:
-        data_path = "./plantseqs/dnabert"
+    data_path = "./PlantSeqs/dnabert"
     bert_path = os.path.join("./checkpoints", f'{args.model_name}/bert')
     probe_path = os.path.join("./checkpoints", f'{args.model_name}/hlps.pt')
     
@@ -99,7 +96,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter, description='Phylogeny Task')
 
-    parser.add_argument('--model_name', '-m', type=str, default='bertphylo', choices=['bertphylo', 'dnabert', 'bertax'], help='Set model name')
+    parser.add_argument('--model_name', '-m', type=str, default='bertphylo', choices=['bertphylo', 'dnabert'], help='Set model name')
     parser.add_argument('--batch_size', type=int, default=64)
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--suffix', type=str, default='test', required=False)
