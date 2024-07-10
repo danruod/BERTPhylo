@@ -58,16 +58,14 @@ Run
 
 to reproduce results for novelty detection and taxonomic classification on the PlantSeqs dataset. The expected runtime of this command is 1 hour using an Nvidia A40 GPU (50 GB), 10 cores of a Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, and 128 GB of RAM. 
 
-After executing the above code, you can get the outputs at `/results/bertphylo`, where `test.xlsx` contains the source data of all tables in the manuscript, `confusion_matrix`, `ood_scores`, and `pr_roc` folders contain the source data required for Fig. 4b, Fig. 5, Fig. S1-S5 in the manuscript.
+After executing the above code, you can get the outputs at `/results/bertphylo`, where `bertphylo_test.xlsx` contains the source data of all tables in the manuscript, `confusion_matrix`, `ood_scores`, and `pr_roc` folders contain the source data required for Fig. 4b, Fig. 5, Fig. S1-S5 in the manuscript.
 
 
 ## File Structure
 
- * [`model/`](https://github.com/danruod/BERTPhylo/tree/main/model) directory provides model implementation of BERTPhylo. 
- * [`checkpoints/`](https://github.com/danruod/BERTPhylo/tree/main/checkpoints) directory contains the trained BERTPhylo model parameters. 
- * [`eval.py`](https://github.com/danruod/BERTPhylo/blob/main/eval.py) conta ins the model evaluation pipeline.
+ * [`eval.py`](https://github.com/danruod/BERTPhylo/blob/main/eval.py) contains the model evaluation pipeline.
+ * [`model/`](https://github.com/danruod/BERTPhylo/tree/main/model) directory provides model implementation of BERTPhylo.
  * [`utils/`](https://github.com/danruod/BERTPhylo/tree/main/utils) directory contains the necessary files for the `eval.py` execution.
-
 
 ## Contact
 Feel free to contact me (Danruo DENG: [drdeng@link.cuhk.edu.hk](mailto:drdeng@link.cuhk.edu.hk)) if anything is unclear or you are interested in potential collaboration.
